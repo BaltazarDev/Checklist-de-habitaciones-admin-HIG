@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "dbchecklist-a8a91"
+  },
+  "targets": {
+    "dbchecklist-a8a91": {
+      "hosting": {
+        "hinnexpadmin": [
+          "checklistadmhinnexp"
+        ],
+        "checklisthinnm": [
+          "checklisthinnm",
+          "checklisthinnm.web.app"
+        ],
+        "checkhinn": [
+          "checklisthinnadm"
+        ]
+      }
+    }
+  }
+}

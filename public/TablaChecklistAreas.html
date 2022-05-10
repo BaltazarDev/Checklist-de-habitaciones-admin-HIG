@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    <title>TABLA HABITACIONES</title>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/tabla.css"> 
+     <title>Tabla Guardia Ejecutiva</title>
+</head>
+<body>
+  <!-- MENU -->
+  <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="InicioAdmin.html">Holiday Inn Express</a>
+    <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarColor02" aria-controls = "navbarColor02" aria-extended = "false" aria-label = "Navegación de palanca ">
+      <span class = "navbar-toggler-icon"> </span>
+    </button>
+    <div class = "collapse navbar-collapse" id= "navbarColor02">
+        <ul class = "navbar-nav mr-auto">
+          <li class = "nav-item">
+            <a class="nav-link" href="InicioAdmin.html">Inicio</span></a>
+          </li>
+          <li class = "nav-item">
+            <a class="nav-link" href="ChecklistAreas.html">Checklist Guardia Ejecutiva</a>
+          </li>
+          <li class = "nav-item">
+            <a class="nav-link" href="ChecklistHabitaciones.html">Checklist Habitaciones</a>
+          </li>
+          <li class = "nav-item active">
+            <a class="nav-link" href="TablaChecklistAreas.html">Tabla Checklist Guardia Ejecutiva</a>
+          </li>
+          <li class = "nav-item">
+            <a class="nav-link" href="TablaChecklistHabitaciones.html">Tabla Checklist Habitaciones</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a id="login">
+          <a id="regresar"></a>
+        </form>
+      </div>
+
+          <!-- FORMULARIO STATUS OCULTO -->
+          <div id="mostrarocultar">
+            <div class="container-form">
+              <div class="form-row">
+                <h6>Resolución de observaciones</h6>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Área" id="sArea">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="ID Rol" id="sIDC">
+                </div>
+                <div class="col">
+                  <input type="date" class="form-control" id="sFecha">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Status" id="sStatus">
+                </div>
+                <button type="button" class="btn btn-outline-secondary" onclick="ocultarFormEditar()">Cancelar</button>
+                <button type="button" class="btn btn-outline-info" id="boton" onclick="guardar()">Añadir status</button>
+              </div>
+            </div>
+          </div>
+          <!-- FIN DEL FORMULARIO OCULTO -->
+        </nav> 
+        <!-- FIN MENU -->
+
+    <div class="table-responsive-lg">
+    <table id="tab" BORDER WIDTH="1000%">
+        <thead>   
+				<tr>
+                    <th colspan="3">DATOS</th>
+                    <th colspan="7">ENTRADA MOTOR LOBBY</th>
+                    <th colspan="13">ÁREA DE RECEPCIÓN</th>
+                    <th colspan="9">ALBERCA</th>
+                    <th colspan="9">GIMNASIO</th>
+                    <th colspan="17">RECORRIDO DE HABITACIONES</th>
+                    <th colspan="17">ALIMENTOS Y BEBIDAS</th>
+                    <th colspan="7">CANCHAS DEPORTIVAS</th>
+                    <th colspan="5">MANTENIMIENTO</th>
+                    <th colspan="8">ÁREAS DE SERVICIO</th>
+                    <th colspan="5">ESTACIONAMIENTO</th>
+                    <th colspan="7">OCUPACIÓN</th>
+                    <th colspan="7">OCUPACIÓN</th>
+                    <th colspan="4">RESOLUCIÓN DE OBERVACIONES</th>
+                    <th colspan="2">ACCIONES</th>
+        </tr>
+				<tr>
+                    <!-- Datos -->
+					          <th>ID ROL</th>
+                    <th>FECHA</th>
+                    <th>HORA</th>
+                    <!-- Entrada motor lobby -->
+                    <th>MOTOR LOBBY LIMPIO E ILUMINADO</th>
+                    <th>ANUNCIO LUMINOSO MARQUESINA ENCENDIDO</th>
+                    <th>ANUNCIO LUMINOSO ENTRADA TOTEM ENCENDIDO</th>
+                    <th>ACCESOS MOTOR LOBBY LIBRE DE OBSTRUCCIONES</th>
+                    <th>BANDERAS</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Área de recepción -->
+                    <th>ENTRADA PRINCIPAL LIMPIA E ILUMINADA</th>
+                    <th>PERSONAL RECEPCIÓN UNIFORMADO Y CON GAFETE</th>
+                    <th>PROCESOS DE CHECK-IN/OUT EFICIENTE (5 MIN. PREOCESOS)</th>
+                    <th>CARROS BELL-BOY EN SU LUGAR</th>
+                    <th>MÚSICA AMBIENTAL ESTANDARIZADA ENCENDIDA (7AM - 11PM)</th>
+                    <th>AROMA ESTANDARIZADO FUNCIONANDO (11 HRS A 11 HRS)</th>
+                    <th>TV PARA EVENTOS ENCENDIDA (CHECHAR ÚLTIMO EVENTO PARA PODER APAGAR)</th>
+                    <th>BAÑOS OPERANDO Y LIMPIOS</th>
+                    <th>COMPUTADORA PARA HUÉSPEDES ENCENDIDA Y ÁREA ILUMINADA</th>
+                    <th>PEDIR LISTA DE LLEGADAS PARA REALIZAR LLAMADAS DE CORTESÍA 30% MÍNIMO DE LAS LLEGADAS DEL DÍA</th>
+                    <th>CENTRO DE NEGOCIOS FUNCIONANDO Y LIMPIO</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Alberca -->
+                    <th>ALBERCA ILUMINADA Y LIMPIA</th>
+                    <th>TELÉFONO EMERGENCIA FUNCIONANDO (FRASEOLOGÍA CORRECTA AL CONTESTAR)</th>
+                    <th>TEMPERATURA AMBIENTE Y APARIENCIA DEL AGUA</th>
+                    <th>EQUIPO SALVAVIDAS EN SU LUGAR</th>
+                    <th>PUERTA DE ACCESO RECEPCIÓN-ALBERCA CERRADA</th>
+                    <th>PUERTAS DE ZONA PERIMETRAL FUNCIONANDO CORRECTAMENTE</th>
+                    <th>MOBILIARIO DEL ÁREA DE ALBERCA EN SU LUGAR Y ÓPTIMAS CONDICIONES</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Gimnasio -->
+                    <th>PUERTA DE ACCESO CERRADA</th>
+                    <th>GIMNASIO EN OPERACIÓN Y LIMPIO</th>
+                    <th>EQUIPOS EN SU LUGAR</th>
+                    <th>TV FUNCIONANDO</th>
+                    <th>CONTROL DE TV EN SU LUGAR</th>
+                    <th>SUMINISTROS (AGUA,TOALLAS,ETC.) A SOLICITUD EN RECEPCIÓN</th>
+                    <th>ÁREA DE SANITIZACIÓN (GEL, TOALLAS HÚMEDAS)</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Recorrido por habitaciones -->
+                    <th>PUERTA DE ACCESO AL ÁREA DE HABITACIONES (CERRADAS)</th>
+                    <th>PUERTA DE ACCESO 1ER PISO A LAS CANCHAS (CERRADA)</th>
+                    <th>PUERTAS DE ACCESO A LAS ESCALERAS DE SERVICIO (CERRADAS Y LIBRE DE OBSTRUCCIONES)</th>
+                    <th>ESCALERAS DE SERVICIO (LIBRES DE OBSTRUCCIONES)</th>
+                    <th>MÁQUINAS VENDING FUNCIONANDO</th>
+                    <th>MÁQUINAS DE HIELO FUNCIONANDO</th>
+                    <th>LOBBIES Y PASILLOS 1ER PISO LIBRES DE OBSTRUCCIONES E ILUMINADOS</th>
+                    <th>LOBBIES Y PASILLOS 2DO PISO LIBRES DE OBSTRUCCIONES E ILUMINADOS</th>
+                    <th>LOBBIES Y PASILLOS 3ER PISO LIBRES DE OBSTRUCCIONES E ILUMINADOS</th>
+                    <th>LOBBIES Y PASILLOS 4TO PISO LIBRES DE OBSTRUCCIONES E ILUMINADOS</th>
+                    <th>SALIDAS DE EMERGENCIA FUNCIONANDO Y LIBRES DE OBSTRUCCIONES</th>
+                    <th>SEÑALIZACIÓN DE EXTINTORES Y SALIDAS DE EMERGENCIA</th>
+                    <th>ILUMINACIÓN EXTERNA DEL EDIFICIO DE HABITACIONES</th>
+                    <th>CUARTO DE LAVADO LIMPIO</th>
+                    <th>CUARTO DE LAVADO EN SERVICIO</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Alimentos y bebidas -->
+                    <th>SALÓN DÓRICO LIMPIO Y EN SERVICIO</th>
+                    <th>SALÓN JÓNICO LIMPIO Y EN SERVICIO</th>
+                    <th>SALÓN CORINTIO LIMPIO Y EN SERVICIO</th>
+                    <th>SALÓN MORELIA LIMPIO Y EN SERVICIO</th>
+                    <th>SALÓN GUADALAJARA LIMPIO Y EN SERVICIO</th>
+                    <th>SALAS EJECUTIVO LIMPIAS Y EN SERVICIO</th>
+                    <th>BAÑOS DE SALONES OPERANDO Y LIMPIOS</th>
+                    <th>MULTICENTRO LIMPIO Y EN SERVICIO</th>
+                    <th>LOBBY DE MULTICENTRO LIMPIO</th>
+                    <th>BAÑO DE LOBBY DE MULTICENTRO OPERANDO Y LIMPIOS</th>
+                    <th>MONTAJES DE SALONES PARA EVENTOS</th>
+                    <th>RESTAURANTE LISTO PARA OPERAR</th>
+                    <th>RESTAURANTES-ESTATUS CORRECTO DE LAS CUENTAS EN SISTEMA (INDICA EL NÚMERO)</th>
+                    <th>CAFETERÍA O DESAYUNADOR LISTO PARA OPERAR</th>
+                    <th>CAFETERÍA-ESTATUS CORRECTO DE LAS CUENTAS EN SISTEMA (INDICA EL NÚMERO)</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Canchas deportivas -->
+                    <th>CANCHA DE TENIS EN USO</th>
+                    <th>CANCHA DE FUTBOL EN USO</th>
+                    <th>CANCHA DE BASKET EN USO E ILUMINADA</th>
+                    <th>BAÑOS LIMPIOS</th>
+                    <th>PUERTAS DE ACCESO A JARDÍN Y CANCHAS (CERRADAS)</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Mantenimiento -->
+                    <th>NIVELES DE CISTERNA</th>
+                    <th>NIVELES DE GAS</th>
+                    <th>PRESIÓN EN AGUA GENERAL</th>
+                    <th>DIESEL PARA PLANTA DE EMERGENCIA</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Áreas de servicio -->
+                    <th>AMA DE LLAVES EN SERVICIO</th>
+                    <th>OFICINA,BODEGAS Y ALMACÉN CERRADAS</th>
+                    <th>BAÑOS DE COLABORADORES LIMPIOS</th>
+                    <th>COMEDOR DE COLABORADORES LIMPIO Y ORDENADO</th>
+                    <th>PUERTAS ENTRADA DE PERSONAL Y MERCANCÍA (CERRADA)</th>
+                    <th>PUERTA TRASERA DEL HOTEL (CERRADA)</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Estacionamiento -->
+                    <th>ILUMINACIÓN</th>
+                    <th>LIMPIO</th>
+                    <th>PLUMAS OPERANDO</th>
+                    <th>OTROS</th>
+                    <th>OBSERVACIONES</th>
+                    <!-- Ocupación -->
+                    <th>HAB. OCUPADAS MLMFO</th>
+                    <th>CANTIDAD</th>
+                    <th>OCUPACIÓN %</th>
+                    <th>CANTIDAD</th>
+                    <th>POR LLEGAR</th>
+                    <th>CANTIDAD</th>
+                    <th>OBSERVACIONES</th>
+
+                    <th>HAB. OCUPADAS MLMRA</th>
+                    <th>CANTIDAD</th>
+                    <th>OCUPACIÓN %</th>
+                    <th>CANTIDAD</th>
+                    <th>POR LLEGAR</th>
+                    <th>CANTIDAD</th>
+                    <th>OBSERVACIONES</th>
+          
+                    <!-- Resolución de observaciones -->
+                    <th>ÁREA</th>
+                    <th>NOMBRE</th>
+                    <th>FECHA</th>
+                    <th>STATUS</th>
+
+                    <!-- Acciones -->
+                    <th>ELIMINAR</th> 
+                    <th>AÑADIR STATUS</th>
+
+				</tr>
+			</thead>
+			<tbody id="tablaareas">
+            </tbody>
+    </table>
+  </div>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="JS/conexion.js"></script>
+    <script src="JS/ConsultaCheckAre.js"></script>
+</body>
+</html>

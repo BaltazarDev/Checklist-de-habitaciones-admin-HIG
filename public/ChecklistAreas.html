@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- Fondo -->
+    <link rel="stylesheet" type="text/css" href="CSS/fondoA.css"> 
+    <!-- Contenedor -->
+    <link rel="stylesheet" type="text/css" href="CSS/contenedor.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Guardia Ejecutiva</title>
+</head>
+<body>
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="InicioAdmin.html">Holiday Inn Express</a>
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarColor02" aria-controls = "navbarColor02" aria-extended = "false" aria-label = "Navegación de palanca ">
+          <span class = "navbar-toggler-icon"> </span>
+        </button>
+        <div class = "collapse navbar-collapse" id= "navbarColor02">
+            <ul class = "navbar-nav mr-auto">
+              <li class = "nav-item">
+                <a class="nav-link" href="InicioAdmin.html">Inicio</span></a>
+              </li>
+              <li class = "nav-item active">
+                <a class="nav-link" href="ChecklistAreas.html">Checklist Guardia Ejecutiva</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="ChecklistHabitaciones.html">Checklist Habitaciones</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="TablaChecklistAreas.html">Tabla Checklist Guardia Ejecutiva</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="TablaChecklistHabitaciones.html">Tabla Checklist Habitaciones</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <a id="login">
+              <a id="regresar"></a>
+            </form>
+          </div>
+        </nav>
+    
+        <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2> CHECKLIST - GUARDIA EJECUTIVA</h2>
+            </div>
+                <div class="card-body">
+                    <br>
+                        <input type="text" class="form-control" placeholder="ID Rol" id="idcolab">
+                    <br><br>
+                        <input type="date" id="fechainput">
+                    <br><br>
+                        <input type="time" id="horainput">
+                    <br><br>
+                    <form action="/my-handling-form-page" method="post">
+                        <div class="form-group form-check">
+                            <h3>ENTRADA MOTOR LOBBY</h3>
+                                <input type="checkbox" class="form-check-input" id="checkEMLMotorLobbyLI">
+                                <label class="form-check-label" for="checkEMLMotorLobbyLI">MOTOR LOBBY LIMPIO E ILUMINADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEMLAnuncioLME">
+                                <label class="form-check-label" for="exampleCheck1">ANUNCIO LUMINOSO MARQUESINA ENCENCIDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEMLAnuncioLETE">
+                                <label class="form-check-label" for="checkEMLAnuncioLETE">ANUNCIO LUMINOSO ENTRADA TOTEM ENCENDIDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEMLAccesosMLLO">
+                                <label class="form-check-label" for="checkEMLAccesosMLLO">ACCESOS AL MOTOR LOBBY LIBRE DE OBSTRUCCIONES</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEMLBanderas">
+                                <label class="form-check-label" for="checkEMLBanderas">BANDERAS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEMLOtros">
+                                <label class="form-check-label" for="checkEMLOtros">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="EMLObservinput">
+                            <br>
+                            <h3>ÁREA DE RECEPCIÓN</h3>
+                                <input type="checkbox" class="form-check-input" id="checkAREntradaPLI">
+                                <label class="form-check-label" for="exampleCheck1">ENTRADA PRINCIPAL LIMPIA E ILUMINADA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARPersonalRUG">
+                                <label class="form-check-label" for="exampleCheck1">PERSONAL RECEPCIÓN UNIFORMADO Y CON GAFETE</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARProcesoCE">
+                                <label class="form-check-label" for="exampleCheck1">PROCESOS DE CHECK-IN/OUT EFICIENTE (5 MIN. PROCESOS)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARCarrosBBL">
+                                <label class="form-check-label" for="exampleCheck1">CARROS BELL-BOY EN SU LUGAR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARMusicaAEE">
+                                <label class="form-check-label" for="exampleCheck1">MÚSICA AMBIENTAL ESTANDARIZADA ENCENDIDA (7AM - 11PM)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARAromaEF">
+                                <label class="form-check-label" for="exampleCheck1">AROMA ESTANDARIZADO EN FUNCIONAMIENTO (11 HRS A 11 HRS)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARTVE">
+                                <label class="form-check-label" for="exampleCheck1">TV PARA EVENTOS ENCENDIDA (CHECHAR ÚLTIMO EVENTO PARA PODER APAGAR)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARBañosO">
+                                <label class="form-check-label" for="exampleCheck1">BAÑOS OPERANDO Y LIMPIOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARComputadoraPHE">
+                                <label class="form-check-label" for="exampleCheck1">COMPUTADORA PARA HUÉSPEDES ENCENDIDA Y ÁREA ILUMINADA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARPedirL">
+                                <label class="form-check-label" for="exampleCheck1">PEDIR LISTA DE LLEGADAS PARA REALIZAR LLAMADAS DE CORTESÍA 30% MÍNIMO DE LAS LLEGADAS DEL DÍA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARCentroN">
+                                <label class="form-check-label" for="exampleCheck1">CENTRO DE NEGOCIOS FUNCIONANDO Y LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAROtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="checkARObservinput">
+                            <br>
+                            <h3>ALBERCA</h3>
+                                <input type="checkbox" class="form-check-input" id="checkAAlbercaIL">
+                                <label class="form-check-label" for="exampleCheck1">ALBERCA ILUMINADA Y LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkATelefonoEF">
+                                <label class="form-check-label" for="exampleCheck1">TELÉFONO DE EMERGENCIA FUNCIONANDO (FRASEOLOGÍA CORRECTA AL CONTESTAR)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkATemperaturaAA">
+                                <label class="form-check-label" for="exampleCheck1">TEMPERATURA AMBIENTE Y APARIENCIA DEL AGUA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAEquipoSL">
+                                <label class="form-check-label" for="exampleCheck1">EQUIPO SALVAVIDAS EN SU LUGAR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAPuertaAR">
+                                <label class="form-check-label" for="exampleCheck1">PUERTA DE ACCESO RECEPCIÓN-ALBERCA CERRADA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAPuertaZP">
+                                <label class="form-check-label" for="exampleCheck1">PUERTAS DE ZONA PERIMETRAL FUNCIONANDO CORRECTAMENTE</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAMobiliario">
+                                <label class="form-check-label" for="exampleCheck1">MOBILIARIO DEL ÁREA DE ALBERCA EN SU LUGAR Y ÓPTIMAS CONDICIONES</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="AObservinput"> 
+                            <br>
+                            <h3>GIMNASIO</h3>
+                                <input type="checkbox" class="form-check-input" id="checkGPuertaAA">
+                                <label class="form-check-label" for="exampleCheck1">PUERTA DE ACCESO CERRADA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkGGimnasio">
+                                <label class="form-check-label" for="exampleCheck1">GIMNASIO EN OPERACIÓN Y LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkGEquipos">
+                                <label class="form-check-label" for="exampleCheck1">EQUIPOS EN SU LUGAR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkGTVF">
+                                <label class="form-check-label" for="exampleCheck1">TV FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkGControlTVL">
+                                <label class="form-check-label" for="exampleCheck1">CONTROL DE TV EN SU LUGAR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkGSuministros">
+                                <label class="form-check-label" for="exampleCheck1">SUMINISTROS (AGUA,TOALLAS,ETC.) A SOLICITUD EN RECEPCIÓN</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkGAreaS">
+                                <label class="form-check-label" for="exampleCheck1">ÁREA DE SANITIZACIÓN (GEL, TOALLAS HÚMEDAS)</label>
+                            <br>    
+                                <input type="checkbox" class="form-check-input" id="checkGOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="GObservinput">
+                            <br>
+                            <h3>RECORRIDO POR HABITACIONES</h3>
+                                <input type="checkbox" class="form-check-input" id="checkRHPuertasA">
+                                <label class="form-check-label" for="exampleCheck1">PUERTAS DE ACCESO AL ÁREA DE HABITACIONES (CERRADAS)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHPuertaA">
+                                <label class="form-check-label" for="exampleCheck1">PUERTA ACCESO 1ER PISO A LAS CANCHAS (CERRADA)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHPuertasAE">
+                                <label class="form-check-label" for="exampleCheck1">PUERTAS DE ACCESO A LAS ESCALERAS DE SERVICIO (CERRADAS Y LIBRES DE OBSTRUCCIONES)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHEscaleras">
+                                <label class="form-check-label" for="exampleCheck1">ESCALERAS DE SERVICIO (LIBRES DE OBSTRUCCIONES)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHMaquinasV">
+                                <label class="form-check-label" for="exampleCheck1">MÁQUINAS VENDING FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHMaquinasHF">
+                                <label class="form-check-label" for="exampleCheck1">MÁQUINAS DE HIELO FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHSalidasELO">
+                                <label class="form-check-label" for="exampleCheck1">LOBBIES Y PASILLOS 1ER PISO LIBRES DE OBSTRUCCIONES E ILUMINADOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHLobbiesP2do">
+                                <label class="form-check-label" for="exampleCheck1">LOBBIES Y PASILLOS 2DO PISO LIBRES DE OBSTRUCCIONES E LUMINADOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHLobbiesP3er">
+                                <label class="form-check-label" for="exampleCheck1">LOBBIES Y PASILLOS 3ER PISO LIBRES DE OBSTRUCCIONES E LUMINADOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHLobbiesP4to">
+                                <label class="form-check-label" for="exampleCheck1">LOBBIES Y PASILLOS 4TO PISO LIBRES DE OBSTRUCCIONES E LUMINADOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHSalidasE">
+                                <label class="form-check-label" for="exampleCheck1">SALIDAS DE EMERGENCIA FUNCIONANDO Y LIBRES DE OBSTRUCCIONES</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHSeñalizacionESE">
+                                <label class="form-check-label" for="exampleCheck1">SEÑALIZACIÓN DE EXTINTORES Y SALIDAS DE EMERGENCIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHIluminacionEEH">
+                                <label class="form-check-label" for="exampleCheck1">ILUMINACIÓN EXTERNA DEL EDIFICIO DE HABITACIONES</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHCuartoL">
+                                <label class="form-check-label" for="exampleCheck1">CUARTO DE LAVADO LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHCuartoLS">
+                                <label class="form-check-label" for="exampleCheck1">CUARTO DE LAVADO EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="RHObservinput">
+                            <br>
+                            <h3>ALIMENTOS Y BEBIDAS</h3>
+                                <input type="checkbox" class="form-check-input" id="checkASalonD">
+                                <label class="form-check-label" for="exampleCheck1">SALÓN DÓRICO LIMPIO Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASalonJ">
+                                <label class="form-check-label" for="exampleCheck1">SALÓN JÓNICO LIMPIO Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASalonC">
+                                <label class="form-check-label" for="exampleCheck1">SALÓN CORINTIO LIMPIO Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASalonM">
+                                <label class="form-check-label" for="exampleCheck1">SALÓN MORELIA LIMPIO Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASalonG">
+                                <label class="form-check-label" for="exampleCheck1">SALÓN GUADALAJARA LIMPIO Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASalonE">
+                                <label class="form-check-label" for="exampleCheck1">SALAS EJECUTIVO LIMPIAS Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkABaños">
+                                <label class="form-check-label" for="exampleCheck1">BAÑOS DE SALONES OPERANDO LIMPIOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAMulticentro">
+                                <label class="form-check-label" for="exampleCheck1">MULTICENTRO LIMPIO Y EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkALobbieM">
+                                <label class="form-check-label" for="exampleCheck1">LOBBY DE MULTICENTRO LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkABañosL">
+                                <label class="form-check-label" for="exampleCheck1">BAÑOS DE LOBBY DE MULTICENTRO OPERANDO Y LIMPIOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAMontajes">
+                                <label class="form-check-label" for="exampleCheck1">MONTAJES DE SALONES PARA EVENTOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARestauranteL">
+                                <label class="form-check-label" for="exampleCheck1">RESTAURANTE LISTO PARA OPERAR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkARestaurante">
+                                <label class="form-check-label" for="exampleCheck1">RESTAURANTES-ESTATUS CORRECTO DE LAS CUENTAS EN SISTEMA (INDICA EL NÚMERO)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkACafeteriaD">
+                                <label class="form-check-label" for="exampleCheck1">CAFETERÍA O DESAYUNADOR LISTO PARA OPERAR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkACafeteria">
+                                <label class="form-check-label" for="exampleCheck1">CAFETERÍA-ESTATUS CORRECTO DE LAS CUENTAS EN SISTEMA (INDICA EL NÚMERO)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkRHOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="RHObservinput">
+                            <br>
+                            <h3>CANCHAS DEPORTIVAS</h3>
+                                <input type="checkbox" class="form-check-input" id="checkCCanchaT">
+                                <label class="form-check-label" for="exampleCheck1">CANCHA DE TENIS EN USO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkCCanchaF">
+                                <label class="form-check-label" for="exampleCheck1">CANCHA DE FUTBOL EN USO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkCCanchaB">
+                                <label class="form-check-label" for="exampleCheck1">CANCHA DE BASKET EN USO E ILUMINADA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkCBaños">
+                                <label class="form-check-label" for="exampleCheck1">BAÑOS LIMPIOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkCPuertas">
+                                <label class="form-check-label" for="exampleCheck1">PUERTAS DE ACCESO A JARDÍN Y CANCHAS (CERRADAS)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="ASObservinput">
+                            <br>
+                            <h3>MANTENIMIENTO</h3>
+                            <div class="grid-container-mantenimiento">
+                                <div>
+                                    <label class="form-check-label" for="exampleCheck1">NIVELES DE CISTERNA</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Cantidad" id="ManNivelC1input">
+                                </div>
+                                <div>
+                                    <label class="form-check-label" for="exampleCheck1">NIVELES DE GAS</label>
+                                </div>  
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Cantidad" id="ManNivelC2input">
+                                </div>
+                                <div>
+                                    <label class="form-check-label" for="exampleCheck1">PRESIÓN EN AGUA GENERAL</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Cantidad" id="ManNivelC3input">
+                                </div>    
+                                <div>   
+                                    <label class="form-check-label" for="exampleCheck1">DIESEL PARA PLANTA DE EMERGENCIA</label>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" placeholder="Cantidad" id="ManNivelC4input">
+                                </div>     
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="EneObservinputinput">
+                            <br>    
+                            <h3>ÁREAS DE SERVICIO</h3>
+                                <input type="checkbox" class="form-check-input" id="checkASAmaLS">
+                                <label class="form-check-label" for="exampleCheck1">AMA DE LLAVES EN SERVICIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASOficinaBAC">
+                                <label class="form-check-label" for="exampleCheck1">OFICINA, BODEGAS y ALMACÉN CERRADAS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkAASBañosL">
+                                <label class="form-check-label" for="exampleCheck1">BAÑOS DE COLABORADORES LIMPIOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASComedor">
+                                <label class="form-check-label" for="exampleCheck1">COMEDOR DE COLABORADORES LIMPIO Y ORDENADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASPuertasEPMC">
+                                <label class="form-check-label" for="exampleCheck1">PUERTAS DE ENTRADA DE PERSONAL Y MERCANCÍA (CERRADA)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASPuertaTHC">
+                                <label class="form-check-label" for="exampleCheck1">PUERTA TRASERA DEL HOTEL (CERRADA)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkASOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="ASObservinput">
+                            <br>
+                            <h3>ESTACIONAMIENTO</h3>
+                                <input type="checkbox" class="form-check-input" id="checkEIluminacion">
+                                <label class="form-check-label" for="exampleCheck1">ILUMINACIÓN</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkELimpio">
+                                <label class="form-check-label" for="exampleCheck1">LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEPlumasO">
+                                <label class="form-check-label" for="exampleCheck1">PLUMAS OPERANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkEOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label> 
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="EObservinput">
+                            <br>
+                            <h3>OCUPACIÓN</h3>
+                                <input type="checkbox" class="form-check-input" id="checkOHabOMLMFO">
+                                <label class="form-check-label" for="exampleCheck1">HAB. OCUPADAS MLMFO</label>
+                                <input type="text" class="form-control" placeholder="Cantidad" id="inputOHabOMLMFO">
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkOOcupacion">
+                                <label class="form-check-label" for="exampleCheck1">% OCUPACIÓN</label>
+                                <input type="text" class="form-control" placeholder="Cantidad" id="inputOOcupacion">
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkOPorLlegar">
+                                <label class="form-check-label" for="exampleCheck1">POR LLEGAR</label> 
+                                <input type="text" class="form-control" placeholder="Cantidad" id="inputOPorLlegar">
+                            <br>
+                                <input type="text" class="form-control" id="OObservinput" placeholder="Observaciones">
+                            <br>
+
+                            <!-- OCUPACIÓN 2 -->
+                            <input type="checkbox" class="form-check-input" id="checkOHabOMLMRA">
+                                <label class="form-check-label" for="exampleCheck1">HAB. OCUPADAS MLMRA</label>
+                                <input type="text" class="form-control" placeholder="Cantidad" id="inputOHabOMLMRA">
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkOOcupacion2">
+                                <label class="form-check-label" for="exampleCheck1">% OCUPACIÓN</label>
+                                <input type="text" class="form-control" placeholder="Cantidad" id="inputOOcupacion2">
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkOPorLlegar2">
+                                <label class="form-check-label" for="exampleCheck1">POR LLEGAR</label> 
+                                <input type="text" class="form-control" placeholder="Cantidad" id="inputOPorLlegar2">
+                            <br>
+                                <input type="text" class="form-control" id="OObservinput2" placeholder="Observaciones">
+                            <br>
+                                <button type="button" class="btn btn-outline-success" id="btnEnviar" onclick="guardarchecklistAreas()">Enviar</button>
+                                <a id="enviado">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="JS/conexion.js"></script>
+<script src="JS/agregarCheckAre.js"></script>
+</body>
+</html>

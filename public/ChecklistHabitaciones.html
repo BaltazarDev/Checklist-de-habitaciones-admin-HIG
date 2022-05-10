@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- Fondo -->
+    <link rel="stylesheet" type="text/css" href="CSS/fondoH.css"> 
+    <!-- Contenedor -->
+    <link rel="stylesheet" type="text/css" href="CSS/contenedor.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Habitaciones</title>
+</head>
+<body>
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="InicioAdmin.html">Holiday Inn Express</a>
+        <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarColor02" aria-controls = "navbarColor02" aria-extended = "false" aria-label = "Navegación de palanca ">
+          <span class = "navbar-toggler-icon"> </span>
+        </button>
+        <div class = "collapse navbar-collapse" id= "navbarColor02">
+            <ul class = "navbar-nav mr-auto">
+              <li class = "nav-item">
+                <a class="nav-link" href="InicioAdmin.html">Inicio</span></a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="ChecklistAreas.html">Checklist Guardia Ejecutiva</a>
+              </li>
+              <li class = "nav-item active">
+                <a class="nav-link" href="ChecklistHabitaciones.html">Checklist Habitaciones</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="TablaChecklistAreas.html">Tabla Checklist Guardia Ejecutiva</a>
+              </li>
+              <li class = "nav-item">
+                <a class="nav-link" href="TablaChecklistHabitaciones.html">Tabla Checklist Habitaciones</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <a id="login">
+              <a id="regresar"></a>
+            </form>
+          </div>
+        </nav>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2> CHECKLIST - HABITACIONES</h2>
+            </div>
+                <div class="card-body">
+                    <br>
+                        <input type="text" class="form-control" placeholder="ID Rol" id="idecolab">
+                    <br><br>
+                        <input type="date" id="fechainput">
+                    <br><br>
+                        <input type="time" id="horainput">
+                    <br><br>
+                    <form action="/my-handling-form-page" method="post">
+                        <div class="form-group form-check">
+                            <h3>PUERTA DE ENTRADA</h3>
+                                <input type="checkbox" class="form-check-input" id="checkLimpiaBE">
+                                <label class="form-check-label" for="checkLimpiaBE">LIMPIA Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeChapaLimpiaBE">
+                                <label class="form-check-label" for="exampleCheck1">CHAPA LIMPIA Y BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeSeguroF">
+                                <label class="form-check-label" for="checkpeSeguroF">SEGURO FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeMirillaLBE">
+                                <label class="form-check-label" for="checkpeMirillaLBE">MIRILLA LIMPIA Y BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeCadena">
+                                <label class="form-check-label" for="checkpeCadena">CADENA O PASADOR DE SEGURIDAD</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeTopePBC">
+                                <label class="form-check-label" for="checkpeTopePBC">TOPE DE PUERTA BIEN COLOCADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpePlano">
+                                <label class="form-check-label" for="checkpePlano">PLANO DE EVACUACIÓN LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeCandado">
+                                <label class="form-check-label" for="checkpeCandado">CANDADO DE "NO MOLESTAR" EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeBisagras">
+                                <label class="form-check-label" for="checkpeBisagras">BISAGRAS DE RESORTE EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeNumeroLBE">
+                                <label class="form-check-label" for="checkpeNumeroLBE">NÚMERO LIMPIO Y BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkpeOtros">
+                                <label class="form-check-label" for="checkpeOtros">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="peObservinput">
+                            <br>
+                        <h3>MOBILIARIO</h3>
+                                <input type="checkbox" class="form-check-input" id="checkmoCestoBLBE">
+                                <label class="form-check-label" for="exampleCheck1">CESTO DE BASURA LIMPIO BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoEscritorLBE">
+                                <label class="form-check-label" for="exampleCheck1">ESCRITORIO LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoEspejoL">
+                                <label class="form-check-label" for="exampleCheck1">ESPEJO LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoCajaSA">
+                                <label class="form-check-label" for="exampleCheck1">CAJA DE SEGURIDAD ABIERTA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoMueble">
+                                <label class="form-check-label" for="exampleCheck1">MUEBLE DE TV EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoTVCRBE">
+                                <label class="form-check-label" for="exampleCheck1">TV Y CONTROL REOMOTO BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoImagen">
+                                <label class="form-check-label" for="exampleCheck1">IMAGEN DE LA PROMESA DE LIMPIEZA AL ENCENDER TV</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoCodigoC">
+                                <label class="form-check-label" for="exampleCheck1">CÓDIGO QR GUÍA DE CANALES</label>
+                            <br>    
+                                <input type="checkbox" class="form-check-input" id="checkmoCodigoR">
+                                <label class="form-check-label" for="exampleCheck1">CÓDIGO QR PARA ROOMSERVICE</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoPortaEBE">
+                                <label class="form-check-label" for="exampleCheck1">PORTA EQUIPAJE EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoBasesCBE">
+                                <label class="form-check-label" for="exampleCheck1">BASES DE CAMA BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoCabeceraBE">
+                                <label class="form-check-label" for="exampleCheck1">CABECERA BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoColchonesBE">
+                                <label class="form-check-label" for="exampleCheck1">COLCHONES BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoSillaEBE">
+                                <label class="form-check-label" for="exampleCheck1">SILLA ERGONÓMICA BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoBuroLBE">
+                                <label class="form-check-label" for="exampleCheck1">BURÓ LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoVentana">
+                                <label class="form-check-label" for="exampleCheck1">VENTANA ABRE Y CIERRA MÁXIMO 10 CM</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoMosquitero">
+                                <label class="form-check-label" for="exampleCheck1">MOSQUITERO EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkmoOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="checkmoObserv">
+                            <br>
+                        <h3>ILUMINACIÓN</h3>
+                                <input type="checkbox" class="form-check-input" id="checkilLamparaE">
+                                <label class="form-check-label" for="exampleCheck1">LÁMPARA DE ESCRITORIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilLamparaC">
+                                <label class="form-check-label" for="exampleCheck1">LÁMPARAS DE CABECERA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilLamparaEV">
+                                <label class="form-check-label" for="exampleCheck1">LÁMPARA ESPEJO DEL VANITY</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilAcrilico">
+                                <label class="form-check-label" for="exampleCheck1">ACRÍLICO LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilFocos">
+                                <label class="form-check-label" for="exampleCheck1">FOCOS DEL BAÑO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilAhorradorF">
+                                <label class="form-check-label" for="exampleCheck1">AHORRADOR FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilApagadoresF">
+                                <label class="form-check-label" for="exampleCheck1">APAGADORES FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkilOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="ilObservinput">
+                            <br>
+                            <h3>GENERALES</h3>
+                                <input type="checkbox" class="form-check-input" id="checkvaPinturaG">
+                                <label class="form-check-label" for="exampleCheck1">PINTURA GENERAL</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaClimaF">
+                                <label class="form-check-label" for="exampleCheck1">CLIMA FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaPiso">
+                                <label class="form-check-label" for="exampleCheck1">PISO/ALFOMBRA LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaPlafon">
+                                <label class="form-check-label" for="exampleCheck1">PLAFÓN EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaTelefonoF">
+                                <label class="form-check-label" for="exampleCheck1">TELÉFONO FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaRadioRF">
+                                <label class="form-check-label" for="exampleCheck1">RADIO RELOJ FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaPlanchaFL">
+                                <label class="form-check-label" for="exampleCheck1">PLANCHA FUNCIONANDO/LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaAntenaI">
+                                <label class="form-check-label" for="exampleCheck1">ANTENA DE INTERNET ENCENDIDA (SI HAY)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaCafetera">
+                                <label class="form-check-label" for="exampleCheck1">CAFETERA LIMPIA Y FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaSuministros">
+                                <label class="form-check-label" for="exampleCheck1">SUMINISTROS DE CAFETERA (TÉ, CAFÉ DESCAFEINADOY REGULAR)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaSecadoraF">
+                                <label class="form-check-label" for="exampleCheck1">SECADORA FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaTablaPBE">
+                                <label class="form-check-label" for="exampleCheck1">TABLA DE PLANCHAR EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaDetectorHF">
+                                <label class="form-check-label" for="exampleCheck1">DETECTOR DE HUMO FUNCIONA (STAND BY)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvaOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="vaObserinput">
+                            <br>
+                            <h3>ROPA DE CAMA Y BAÑO</h3>
+                                <input type="checkbox" class="form-check-input" id="checkblSabanasL">
+                                <label class="form-check-label" for="exampleCheck1">SÁBANAS LIMPIAS (3)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblFundasL">
+                                <label class="form-check-label" for="exampleCheck1">FUNDAS LIMPIAS (4 POR CAMA)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblCubreC">
+                                <label class="form-check-label" for="exampleCheck1">CUBRE COLCHÓN (1)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblAlmohadas">
+                                <label class="form-check-label" for="exampleCheck1">ALMOHADAS (4 POR CAMA)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvblPersianasLF">
+                                <label class="form-check-label" for="exampleCheck1">PERSIANAS/CORTINAS LIMPIAS Y FUNCIONANDO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblInsertoD">
+                                <label class="form-check-label" for="exampleCheck1">INSERTO DUVET (1)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblFundaD">
+                                <label class="form-check-label" for="exampleCheck1">FUNDA DUVET (1)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblToallasB">
+                                <label class="form-check-label" for="exampleCheck1">TOALLAS DE BAÑO (3)</label>
+                            <br>    
+                                <input type="checkbox" class="form-check-input" id="checkblToallasF">
+                                <label class="form-check-label" for="exampleCheck1">TOALLAS DE FACIALES (3)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblToallasM">
+                                <label class="form-check-label" for="exampleCheck1">TOALLAS DE MANO (3) </label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblTapeteT">
+                                <label class="form-check-label" for="exampleCheck1">TAPETE TOALLAS (1)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkblOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="blObservinput">
+                            <br>
+                            <h3>VANITY</h3>
+                                <input type="checkbox" class="form-check-input" id="checkvanClosetLBE">
+                                <label class="form-check-label" for="exampleCheck1">CLOSET LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanGanchosC">
+                                <label class="form-check-label" for="exampleCheck1">GANCHOS COMPLETOS (3 DAMA Y 3 CABALLERO)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanEntrepanosL">
+                                <label class="form-check-label" for="exampleCheck1">ENTREPAÑOS LIMPIOS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanLavadoL">
+                                <label class="form-check-label" for="exampleCheck1">LAVABO LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanLlaves">
+                                <label class="form-check-label" for="exampleCheck1">LLAVES LIMPIAS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanMezcladoraL">
+                                <label class="form-check-label" for="exampleCheck1">MEZCLADORA LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanShampoo">
+                                <label class="form-check-label" for="exampleCheck1">SHAMPOO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanCrema">
+                                <label class="form-check-label" for="exampleCheck1">CREMA HUMECTANTE</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanEnjuague">
+                                <label class="form-check-label" for="exampleCheck1">ENJUAGUE BUCAL</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanJabonC">
+                                <label class="form-check-label" for="exampleCheck1">JABÓN CORPORAL</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanJabonE">
+                                <label class="form-check-label" for="exampleCheck1">JABÓN EXFOLIANTE</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanDestapador">
+                                <label class="form-check-label" for="exampleCheck1">DESTAPADOR LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanToalleroL">
+                                <label class="form-check-label" for="exampleCheck1">TOALLERO LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanBotellasA">
+                                <label class="form-check-label" for="exampleCheck1">BOTELLAS DE AGUA (2)</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanEspejoLBE">
+                                <label class="form-check-label" for="exampleCheck1">ESPEJO LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanKleeneraL">
+                                <label class="form-check-label" for="exampleCheck1">KLEENERA LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkvanOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="vanObserinput">
+                            <br>
+                            <h3>BAÑO</h3>
+                                <input type="checkbox" class="form-check-input" id="checkbPuertaLBE">
+                                <label class="form-check-label" for="exampleCheck1">PUERTA LIMPIA Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbChapaL">
+                                <label class="form-check-label" for="exampleCheck1">CHAPA LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbTopeBC">
+                                <label class="form-check-label" for="exampleCheck1">TOPE BIEN COLOCADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbAreaRL">
+                                <label class="form-check-label" for="exampleCheck1">ÁREA DE REGADERA LIMPIA</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbCortina">
+                                <label class="form-check-label" for="exampleCheck1">CORTINA DE BAÑO LIMPIA Y EN  BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbCancel">
+                                <label class="form-check-label" for="exampleCheck1">CANCEL DE REGADERA LIMPIO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbMonomandoLBE">
+                                <label class="form-check-label" for="exampleCheck1">MONOMANDO LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbLlaves">
+                                <label class="form-check-label" for="exampleCheck1">LLAVES LIMPIAS</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbCestoBLBE">
+                                <label class="form-check-label" for="exampleCheck1">CESTO DE BASURA LIMPIO Y EN BUEN ESTADO</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbWC">
+                                <label class="form-check-label" for="exampleCheck1">WC</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbExtractor">
+                                <label class="form-check-label" for="exampleCheck1">EXTRACTOR</label>
+                            <br>
+                                <input type="checkbox" class="form-check-input" id="checkbOtros">
+                                <label class="form-check-label" for="exampleCheck1">OTROS</label>
+                            <br>
+                                <input type="text" class="form-control" placeholder="Observaciones" id="bObservinput">
+                            <br>
+                                <button type="button" class="btn btn-outline-success" id="btnEnviar" onclick="guardarchecklistHab()">Enviar</button>
+                                <a id="enviado"></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="JS/conexion.js"></script>
+<script src="JS/agregarCheckHab.js"></script>
+</body>
+</html>

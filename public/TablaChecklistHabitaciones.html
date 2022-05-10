@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    <title>TABLA HABITACIONES</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/tabla.css"> 
+  </head>
+<body>
+  <!-- MENU -->
+  <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="InicioAdmin.html">Holiday Inn Express</a>
+    <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarColor02" aria-controls = "navbarColor02" aria-extended = "false" aria-label = "Navegación de palanca ">
+      <span class = "navbar-toggler-icon"> </span>
+    </button>
+    <div class = "collapse navbar-collapse" id= "navbarColor02">
+        <ul class = "navbar-nav mr-auto">
+          <li class = "nav-item">
+            <a class="nav-link" href="InicioAdmin.html">Inicio</span></a>
+          </li>
+          <li class = "nav-item">
+            <a class="nav-link" href="ChecklistAreas.html">Checklist Guardia Ejecutiva</a>
+          </li>
+          <li class = "nav-item">
+            <a class="nav-link" href="ChecklistHabitaciones.html">Checklist Habitaciones</a>
+          </li>
+          <li class = "nav-item">
+            <a class="nav-link" href="TablaChecklistAreas.html">Tabla Checklist Guardia Ejecutiva</a>
+          </li>
+          <li class = "nav-item active">
+            <a class="nav-link" href="TablaChecklistHabitaciones.html">Tabla Checklist Habitaciones</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <a id="login">
+          <a id="regresar"></a>
+        </form>
+      </div>
+  
+
+  <!-- FORMULARIO STATUS OCULTO -->
+    <div id="mostrarocultar">
+      <div class="container-form">
+        <div class="form-row">
+          <h6>Resolución de observaciones</h6>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Área" id="sArea">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="ID Rol" id="sIDC">
+          </div>
+          <div class="col">
+            <input type="date" class="form-control" id="sFecha">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Status" id="sStatus">
+          </div>
+          <button type="button" class="btn btn-info" id="boton" onclick="guardar()">Añadir status</button>
+        </div>
+      </div>
+    </div>
+  <!-- FIN DEL FORMULARIO OCULTO -->
+  </nav>
+  <!-- FIN MENU --> 
+
+  
+    <div class="table-responsive-lg">
+      <table id="tab" BORDER WIDTH="1000%">
+          <thead>
+              <tr>
+                  <th colspan="3">DATOS</th>
+                  <th colspan="12">PUERTA DE ENTRADA</th>
+                  <th colspan="19">MOBILIARIO</th>
+                  <th colspan="9">ILUMINACIÓN</th>
+                  <th colspan="15">GENERALES</th>
+                  <th colspan="13">BLANCOS</th>
+                  <th colspan="18">VANITY</th>
+                  <th colspan="13">BAÑO</th>
+                  <th colspan="4">RESOLUCIÓN DE OBSERVACIONES</th>
+                  <th colspan="2">ACCIONES</th>
+              </tr>
+              <tr>
+                  
+                  <th>ID ROL</th>
+                  <th>FECHA</th>
+                  <th>HORA</th>
+                <!-- //Puerta de entrada   -->
+                  <th>LIMPIA BUEN ESTADO</th>
+                  <th>CHAPA LIMPIA BUEN ESTADO</th>
+                  <th>SEGURO FUNCIONANDO</th>
+                  <th>MIRILLA LIMPIA BUEN ESTADO</th>
+                  <th>CADENA O PASADOR</th>
+                  <th>TOPE DE PUERTA BUEN ESTADO</th>
+                  <th>PLANO DE EVACUACIÓN BUEN ESTADO</th>
+                  <th>CANDADO "NO MOLESTAR" BUEN ESTADO</th>
+                  <th>BISAGRAS DE RESORTE BUEN ESTADO</th>
+                  <th>NÚMERO LIMPIO BUEN ESTADO</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+                <!-- Mobiliario -->
+                  <th>CESTO BASURA LIMPIO BUEN ESTADO</th>
+                  <th>ESCRITORIO LIMPIO BUEN ESTADO</th>
+                  <th>ESPEJO LIMPIO</th>
+                  <th>CAJA SEGURIDAD ABIERTA</th>
+                  <th>MUEBLE DE TV EN BUEN ESTADO</th>
+                  <th>TV Y CONTROL REMOTO BUEN ESTADO</th>
+                  <th>IMAGEN DE LA PROMESA DE LIMPIEZA AL ENCENDER TV</th>
+                  <th>CÓDIGO QR GUÍA DE CANALES</th>
+                  <th>CÓDIGO QR PARA ROOMSERVICE</th>
+                  <th>PORTA EQUIPAJE BUEN ESTADO</th>
+                  <th>BASES CAMA BUEN ESTADO</th>
+                  <th>CABECERA BUEN ESTADO</th>
+                  <th>COLCHONES BUEN ESTADO</th>
+                  <th>SILLA ERGONÓMICA BUEN ESTADO</th>
+                  <th>BURÓ LIMPIO BUEN ESTADO</th>
+                  <th>VENTANA LIMPIA</th>
+                  <th>MOSQUITERO EN BUEN ESTADO</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+                <!-- Iluminación -->
+                  <th>LÁMPARA ESCRITORIO</th>
+                  <th>LÁMPARA CABECERA</th>
+                  <th>LÁMPARA ESPEJO VANITY</th>
+                  <th>LAMBRIN LIMPIO</th>
+                  <th>FOCOS DEL BAÑO</th>
+                  <th>AHORRADOR FUNCIONANDO</th>
+                  <th>APAGADORES FUNCIONANDO</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+                  <!-- Generales -->
+                  <th>PINTURA GENERAL</th>
+                  <th>CLIMA FUNCIONANDO</th>
+                  <th>PISO LIMPIO</th>
+                  <th>PLAFÓN EN BUEN ESTADO</th>
+                  <th>TELÉFONO FUNCIONANDO</th>
+                  <th>RADIO RELOJ FUNCIONANDO</th>
+                  <th>PLANCHA FUNCIONANDO/LIMPIA</th>
+                  <th>ANTENA INTERNET (SI HAY)</th>
+                  <th>CAFETERA Y SUMINISTROS</th>
+                  <th>SUMINISTROS DE CAFETERA</th>
+                  <th>SECADORA FUNCIONANDO</th>
+                  <th>TABLA DE PLANCHAR BUEN ESTADO</th>
+                  <th>DETECTOR DE HUMO FUNCIONA (STAND BY)</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+                <!-- Ropa de cama y baño -->
+                  <th>SÁBANAS LIMPIAS(3)</th>
+                  <th>FUNDAS LIMPIAS(4 POR CAMA)</th>
+                  <th>CUBRE COLCHÓN(1)</th>
+                  <th>ALMOHADAS(4 POR CAMA)</th>
+                  <th>PERSIANAS/CORTINAS LIMPIAS FUNCIONANDO</th>
+                  <th>INSERTO DUVET(1)</th>
+                  <th>FUNDA DUVET(1)</th>
+                  <th>TOALLAS DE BAÑO(3)</th>
+                  <th>TOALLAS DE FACIALES(2)</th>
+                  <th>TOALLAS DE MANO(2)</th>
+                  <th>TAPETE TOALLAS(1)</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+                <!-- Vanity -->
+                  <th>CLOSET LIMPIO BUEN ESTADO</th>
+                  <th>GANCHOS COMPLETOS (3 DAMA, 3 CABALLERO)</th>
+                  <th>ENTREPAÑOS LIMPIOS</th>
+                  <th>LAVABO LIMPIO</th>
+                  <th>LLAVE LIMPIA</th>
+                  <th>MEZCLADORA LIMPIA</th>
+                  <th>SHAMPOO</th>
+                  <th>CREMA HUMECTANTE</th>
+                  <th>ENJUAGUE BUCAL</th>
+                  <th>JABÓN CORPORAL</th>
+                  <th>JABÓN EXFOLIANTE</th>
+                  <th>DESTAPADOR LIMPIO</th>
+                  <th>TOALLERO LIMPIO</th>
+                  <th>BOTELLAS DE AGUA (2)</th>
+                  <th>ESPEJO LIMPIO Y EN BUEN ESTADO</th>
+                  <th>KLEENERA LIMPIA</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+                <!-- Baño -->
+                  <th>PUERTA LIMPIA BUEN ESTADO</th>
+                  <th>CHAPA LIMPIA</th>
+                  <th>TOPE BIEN COLOCADO</th>
+                  <th>ÁREA DE REGADERA LIMPIA</th>
+                  <th>CORTINA DE BAÑO LIMPIA BUEN ESTADO</th>
+                  <th>CANCEL DE REGADERA LIMPIO</th>
+                  <th>MONOMANDO LIMPIO BUEN ESTADO</th>
+                  <th>LLAVES LIMPIAS</th>
+                  <th>CESTO DE BASURA LIMPIO BUEN ESTADO</th>
+                  <th>WC LIMPIO BUEN ESTADO</th>
+                  <th>EXTRACTOR BUEN ESTADO</th>
+                  <th>OTROS</th>
+                  <th>OBSERVACIONES</th>
+
+                  <!-- Resolución de observaciones -->
+                  <th>ÁREA</th>
+                  <th>NOMBRE</th>
+                  <th>FECHA</th>
+                  <th>STATUS</th>
+
+                  <th>ELIMINAR</th> 
+                  <th>AÑADIR STATUS</th>
+              </tr>
+              </thead>
+          <tbody id="tablahabitaciones">
+          </tbody>
+        </table>
+  </div>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="JS/conexion.js"></script>
+    <script src="JS/ConsultaCheckHab.js"></script>
+    <script src="JS/exportartabla.js"></script>
+</body>
+</html>
